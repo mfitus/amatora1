@@ -9,10 +9,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Database connection details
 const dbConfig = {
-    host: 'baoivsz1j04goy1gqffg-mysql.services.clever-cloud.com',
-    user: 'uym9wiakrb7quu3n',
-    password: 'KuOtcpkcHdHWtIkIDJzX', // Replace with your MySQL password
-    database: 'baoivsz1j04goy1gqffg'
+    host: 'bqq5wyppbxc5gasserx0-mysql.services.clever-cloud.com',
+    user: 'ug8fjhlm1seljjec',
+    password: 'ug8fjhlm1seljjec', // Replace with your MySQL password
+    database: 'bqq5wyppbxc5gasserx0'
 };
 
 let db;
@@ -45,11 +45,11 @@ handleDisconnect();
 
 // In-memory storage for votes (for simplicity)
 let votes = {
-    "KAYITESI. ": 0,
-    "CHARTINE. ": 0,
-    "EPIPHANIE. ": 0,
-    "HENRIETTE. ": 0,
-    "DAMARS. ": 0
+    "MFITUMUKIZA. ": 0,
+    "KABATESI. ": 0,
+    "SHAMI. ": 0,
+    "TUYISHIME. ": 0,
+    "HUMURA. ": 0
 };
 
 // In-memory storage for user data (for simplicity)
@@ -96,8 +96,8 @@ app.post('/ussd', (req, res) => {
             } else {
                 // Voting option selected
                 response = userLanguages[phoneNumber] === 'en' ? 
-                    `CON Select a candidate:\n1. kayitesi chartine\n2. chartine mutesi\n3. epiphanie nyira\n4. umugwaneza henriette\n5. niyomukiza damars` : 
-                    `CON Hitamo umukandida:\n1. kayitesi chartine\n2. chartine mutesi\n3. epiphanie nyira\n4. umugwaneza henriette\n5. niyomukiza damars`;
+                    `CON Select a candidate:\n1. Mfitumukiza Eric\n2. Kabatesi Shamimu\n3. Shami Aimee\n4. Tuyishime Bienvenu\n5. Humura Dieudonne` : 
+                    `CON Hitamo umukandida:\n1. Mfitumukiza Eric\n2. Kabatesi Shamimu\n3. Shami Aimee\n4. Tuyishime Bienvenu\n5. Humura Dieudonne`;
             }
         } else if (userInput[2] === '2') {
             // View votes option selected
